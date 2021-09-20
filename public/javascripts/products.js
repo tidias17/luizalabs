@@ -31,11 +31,13 @@ async function buildUnitaryProduct(list) {
     unitary.classList.add("container-product-unitary")
 
     let dataProduct = `
-      <p>${product.title}</p>
+      <img src="${product.image}" alt="${product.title}"/>
+      <p class="description-product">${product.title}</p>
+      <p class="price">${product.price.toLocaleString('pt-br',{style: 'currency', currency: product.currencyId})}</p>
       ${(identify === "/") ? `
-        <p class="event-in-product ${(existsInWishlist(product.id)) ? 'active': ''}" data-info='${JSON.stringify(product)}'}>Favoritar</p>
+        <section class="event-in-product ${(existsInWishlist(product.id)) ? 'active': ''}" data-info='${JSON.stringify(product)}'} >${heart}</section>
       ` : `
-        <p class="event-in-product" data-info='${JSON.stringify(product)}'}>Desfavorito</p>
+        <section class="event-in-product wishlist-page" data-info='${JSON.stringify(product)}'}>${circleClose}</section>
       `}
     `;
 

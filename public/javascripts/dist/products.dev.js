@@ -62,7 +62,10 @@ function buildUnitaryProduct(list) {
           return regeneratorRuntime.awrap(list.map(function (product) {
             var unitary = document.createElement('section');
             unitary.classList.add("container-product-unitary");
-            var dataProduct = "\n      <p>".concat(product.title, "</p>\n      ").concat(identify === "/" ? "\n        <p class=\"event-in-product ".concat(existsInWishlist(product.id) ? 'active' : '', "\" data-info='").concat(JSON.stringify(product), "'}>Favoritar</p>\n      ") : "\n        <p class=\"event-in-product\" data-info='".concat(JSON.stringify(product), "'}>Desfavorito</p>\n      "), "\n    ");
+            var dataProduct = "\n      <img src=\"".concat(product.image, "\" alt=\"").concat(product.title, "\"/>\n      <p class=\"description-product\">").concat(product.title, "</p>\n      <p class=\"price\">").concat(product.price.toLocaleString('pt-br', {
+              style: 'currency',
+              currency: product.currencyId
+            }), "</p>\n      ").concat(identify === "/" ? "\n        <section class=\"event-in-product ".concat(existsInWishlist(product.id) ? 'active' : '', "\" data-info='").concat(JSON.stringify(product), "'} >").concat(heart, "</section>\n      ") : "\n        <section class=\"event-in-product wishlist-page\" data-info='".concat(JSON.stringify(product), "'}>").concat(circleClose, "</section>\n      "), "\n    ");
             unitary.innerHTML = dataProduct;
             document.querySelector(".products-container").appendChild(unitary);
           }));

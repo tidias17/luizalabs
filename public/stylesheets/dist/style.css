@@ -40,7 +40,7 @@ a, a:hover {
 
 header {
   width: 100%;
-  height: 120px;
+  height: 170px;
   display: flex;
   background-color: #5a2d82;
   padding: 24px 12px;
@@ -109,8 +109,66 @@ header {
 }
 .products-container .container-product-unitary {
   width: 24%;
-  height: 250px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
   border: 1px solid #999999;
   margin-bottom: 24px;
+  position: relative;
+  padding-top: 24px;
+}
+.products-container .container-product-unitary .event-in-product {
+  width: 36px;
+  height: 44px;
+  position: absolute;
+  top: 0;
+  left: 12px;
+  background-color: #4D4D4D;
+  text-align: center;
+  cursor: pointer;
+}
+.products-container .container-product-unitary .event-in-product:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  display: inline-block;
+  border-style: solid;
+  border-width: 16px 18px 0 18px;
+  border-color: #4D4D4D transparent transparent transparent;
+}
+.products-container .container-product-unitary .event-in-product svg {
+  margin-top: 8px;
+  width: 20px;
+  height: 20px;
+  fill: #FFFFFF;
+  pointer-events: none;
+}
+.products-container .container-product-unitary .event-in-product.active svg {
+  fill: #D40000;
+}
+.products-container .container-product-unitary .event-in-product.wishlist-page {
+  left: initial;
+  right: 12px;
+  background-color: transparent;
+}
+.products-container .container-product-unitary .event-in-product.wishlist-page svg {
+  fill: #4D4D4D;
+}
+.products-container .container-product-unitary .event-in-product.wishlist-page:after {
+  content: none;
+}
+.products-container .container-product-unitary .description-product {
+  margin: 20px auto;
+}
+.products-container .container-product-unitary .price {
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #f7dc6a;
+  margin: 60px auto;
 }
