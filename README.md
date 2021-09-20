@@ -12,15 +12,15 @@ Para este projeto optei por desenvolver utilizando as seguintes premissas:
 
 |       Ferramentas       | Descrição                             |
 | :---------------------: | ------------------------------------- |
-|        **Node.js**        | React Framework v16.13.1              |
-|        **Express**        | React Framework v16.13.1              |
-|        **Axios**        | React Framework v16.13.1              |
-|        **Jade**        | React Framework v16.13.1              |
-|        **Sass**        | React Framework v16.13.1              |
+|        **Node.js**        | https://nodejs.org/                 |
+|        **Express**        | https://expressjs.com/              |
+|        **Axios**        | https://www.npmjs.com/package/axios   |
+|        **Jade**        | https://jade-lang.com/.                |
+|        **Sass**        | https://sass-lang.com/.                |
 
 ## Rodando o projeto localmente
 
-1. Clone o projeto `git clone XXX` em um diretório de sua preferência;
+1. Clone o projeto `git clone git@github.com:tidias17/luizalabs.git` em um diretório de sua preferência;
 2. No diretório principal do projeto, para instalar as dependências listadas em package.json, deverá ser executado o comando `npm i`;
 3. Para iniciar a aplicação, é necessário que no diretório principal deste repositório, execute o comando `npm start`. Este será disponibilizado na rota http://localhost:3000.
 
