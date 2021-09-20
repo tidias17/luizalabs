@@ -5,15 +5,17 @@ function getLocasStorage() {
 }
 
 function existsInWishlist(id) {
-  var verify = getLocasStorage().find(function (element) {
-    return element.id === id;
-  });
+  if (getLocasStorage() !== null && getLocasStorage().length !== 0) {
+    var verify = getLocasStorage().find(function (element) {
+      return element.id === id;
+    });
 
-  if (verify === undefined) {
-    return false;
+    if (verify === undefined) {
+      return false;
+    }
+
+    return true;
   }
-
-  return true;
 }
 
 function getProductsWishlist() {

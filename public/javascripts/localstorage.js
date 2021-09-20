@@ -3,11 +3,13 @@ function getLocasStorage() {
 }
 
 function existsInWishlist(id) {
-  const verify = getLocasStorage().find((element) => {return element.id === id});
-  if(verify === undefined) {
-    return false;
+  if(getLocasStorage() !== null && getLocasStorage().length !== 0) {
+    const verify = getLocasStorage().find((element) => {return element.id === id});
+    if(verify === undefined) {
+      return false;
+    }
+    return true;
   }
-  return true;
 }
 
 async function getProductsWishlist() {
