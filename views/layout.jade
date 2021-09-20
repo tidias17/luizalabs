@@ -4,7 +4,6 @@ html
     title=title
     link(rel='stylesheet', href='/stylesheets/dist/style.css')
   body
-    header()
-      p Cabeçario
-    section.breadcrumb Mapa de Migalhas
+    include ./includes/header.jade
+    include ./includes/breadcrumb.jade
     block content

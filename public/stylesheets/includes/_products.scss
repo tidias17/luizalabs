@@ -1,0 +1,13 @@
+.products-container {
+  margin: 24px 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .container-product-unitary {
+    width: 24%;
+    height: 250px;
+    display: flex;
+    border: 1px solid $grey-400;
+    margin-bottom: 24px;
+  }
+}

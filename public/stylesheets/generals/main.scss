@@ -1,0 +1,32 @@
+@import 'variables';
+@import 'fonts';
+
+a, a:hover, ul, li, p, h1, h2, h3, h4, h5 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: none;
+	font-style: normal;
+	text-decoration: none;
+	line-height: 1.5;
+}
+* {
+	box-sizing: border-box;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-size: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: $white;
+	margin: 0;
+}
+ul {
+	list-style: none;
+}
+a, a:hover {
+	text-decoration: none;
+	color: $black;
+}

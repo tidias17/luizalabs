@@ -1,0 +1,11 @@
+.products-container {
+  margin: 24px 12px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.products-container .container-product-unitary {
+  width: 30%;
+  height: 250px;
+  display: flex;
+}

@@ -1,0 +1,55 @@
+.loading {
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.loader {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  vertical-align: middle;
+}
+
+.loader-bars:before,
+.loader-bars:after,
+.loader-bars span {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 30px;
+  background-color: #5a2d82;
+  animation: grow 1.5s linear infinite;
+}
+
+.loader-bars:after {
+  left: 15px;
+  animation: grow 1.5s linear -0.5s infinite;
+}
+
+.loader-bars span {
+  left: 30px;
+  animation: grow 1.5s linear -1s infinite;
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  50% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    opacity: 0;
+  }
+}

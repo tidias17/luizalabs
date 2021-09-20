@@ -27,22 +27,21 @@ async function clickInEventProductList() {
 
 async function buildUnitaryProduct(list) {
   await list.map((product) => {
-    let unitary = document.createElement('unitary');
+    let unitary = document.createElement('section');
+    unitary.classList.add("container-product-unitary")
 
     let dataProduct = `
-      <div class="container-product-unitary">
-        <p>${product.title}</p>
-        ${(identify === "/") ? `
-          <p class="event-in-product ${(existsInWishlist(product.id)) ? 'active': ''}" data-info='${JSON.stringify(product)}'}>Favoritar</p>
-        ` : `
-          <p class="event-in-product" data-info='${JSON.stringify(product)}'}>Desfavorito</p>
-        `}
-      </div>
+      <p>${product.title}</p>
+      ${(identify === "/") ? `
+        <p class="event-in-product ${(existsInWishlist(product.id)) ? 'active': ''}" data-info='${JSON.stringify(product)}'}>Favoritar</p>
+      ` : `
+        <p class="event-in-product" data-info='${JSON.stringify(product)}'}>Desfavorito</p>
+      `}
     `;
 
     unitary.innerHTML = dataProduct;
 
-    document.querySelector(".productsContainer").appendChild(unitary);
+    document.querySelector(".products-container").appendChild(unitary);
   });
   clickInEventProductList();
 }
@@ -64,10 +63,10 @@ async function populatingWishlist() {
         <p>:(<br>Sentimos muito, mas ainda não existe itens na sua lista de desejos!</p>
       `;
       empty.innerHTML = emptyWishlist;
-      document.querySelector(".productsContainer").innerHTML = '';
-      document.querySelector(".productsContainer").appendChild(empty);
+      document.querySelector(".products-container").innerHTML = '';
+      document.querySelector(".products-container").appendChild(empty);
     } else {
-      document.querySelector(".productsContainer").innerHTML = '';
+      document.querySelector(".products-container").innerHTML = '';
       buildUnitaryProduct(getLocasStorage());
     }
   });

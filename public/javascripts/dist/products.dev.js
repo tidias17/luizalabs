@@ -60,10 +60,11 @@ function buildUnitaryProduct(list) {
         case 0:
           _context3.next = 2;
           return regeneratorRuntime.awrap(list.map(function (product) {
-            var unitary = document.createElement('unitary');
-            var dataProduct = "\n      <div class=\"container-product-unitary\">\n        <p>".concat(product.title, "</p>\n        ").concat(identify === "/" ? "\n          <p class=\"event-in-product ".concat(existsInWishlist(product.id) ? 'active' : '', "\" data-info='").concat(JSON.stringify(product), "'}>Favoritar</p>\n        ") : "\n          <p class=\"event-in-product\" data-info='".concat(JSON.stringify(product), "'}>Desfavorito</p>\n        "), "\n      </div>\n    ");
+            var unitary = document.createElement('section');
+            unitary.classList.add("container-product-unitary");
+            var dataProduct = "\n      <p>".concat(product.title, "</p>\n      ").concat(identify === "/" ? "\n        <p class=\"event-in-product ".concat(existsInWishlist(product.id) ? 'active' : '', "\" data-info='").concat(JSON.stringify(product), "'}>Favoritar</p>\n      ") : "\n        <p class=\"event-in-product\" data-info='".concat(JSON.stringify(product), "'}>Desfavorito</p>\n      "), "\n    ");
             unitary.innerHTML = dataProduct;
-            document.querySelector(".productsContainer").appendChild(unitary);
+            document.querySelector(".products-container").appendChild(unitary);
           }));
 
         case 2:
@@ -109,10 +110,10 @@ function populatingWishlist() {
               var empty = document.createElement('empty');
               var emptyWishlist = "\n        <p>:(<br>Sentimos muito, mas ainda n\xE3o existe itens na sua lista de desejos!</p>\n      ";
               empty.innerHTML = emptyWishlist;
-              document.querySelector(".productsContainer").innerHTML = '';
-              document.querySelector(".productsContainer").appendChild(empty);
+              document.querySelector(".products-container").innerHTML = '';
+              document.querySelector(".products-container").appendChild(empty);
             } else {
-              document.querySelector(".productsContainer").innerHTML = '';
+              document.querySelector(".products-container").innerHTML = '';
               buildUnitaryProduct(getLocasStorage());
             }
           }));
