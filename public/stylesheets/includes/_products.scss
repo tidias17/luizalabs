@@ -68,4 +68,9 @@
       margin: 60px auto;
     }
   }
+  @media all and (max-width: $widthPrimarySmall) {
+    .container-product-unitary {
+      width: 100%;
+    }
+  }
 }

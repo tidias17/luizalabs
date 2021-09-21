@@ -49,4 +49,17 @@ header {
       padding-left: 40px;
     }
   }
+  @media all and (max-width: $widthPrimarySmall) {
+    height: auto;
+    flex-wrap: wrap;
+    .logo {
+      width: 100%;
+      flex: initial;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .option-header {
+      width: 100%;
+    }
+  }
 }

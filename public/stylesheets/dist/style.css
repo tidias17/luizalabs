@@ -99,6 +99,21 @@ header .container-generals input {
   background-size: 16px 16px;
   padding-left: 40px;
 }
+@media all and (max-width: 767px) {
+  header {
+    height: auto;
+    flex-wrap: wrap;
+  }
+  header .logo {
+    width: 100%;
+    flex: initial;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  header .option-header {
+    width: 100%;
+  }
+}
 
 .loading {
   width: 100%;
@@ -225,4 +240,9 @@ header .container-generals input {
   font-weight: 700;
   color: #f7dc6a;
   margin: 60px auto;
+}
+@media all and (max-width: 767px) {
+  .products-container .container-product-unitary {
+    width: 100%;
+  }
 }
