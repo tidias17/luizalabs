@@ -1,12 +1,10 @@
 async function renderBreadcrumb() {
   const itens = [];
-  console.log(identify)
   if(identify === "/") {
     itens.push({description: "Home", href: "/"});
   } else if(identify === "/wishlist") {
     itens.push({description: "Home", href: "/"}, {description: "Lista de Desejos", href: "/wishlist"});
   }
-  console.log(itens)
   let link = "";
   itens.map((item, index) => {
     link = document.createElement('a');

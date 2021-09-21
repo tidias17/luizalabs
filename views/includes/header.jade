@@ -1,2 +1,14 @@
 header
-  p Cabeçario
+  .logo
+    a(href="/") MagaNets 
+  .container-generals
+    div.option-header
+      include ../../public/images/locale.svg
+      p Cidade: São Paulo
+    div.option-header
+      include ../../public/images/phone.svg
+      p Central de Atendimento
+    a.option-header(href="/wishlist")
+      include ../../public/images/heart.svg
+      span Lista de Desejos
+    input.search(placeholder="Buscar")

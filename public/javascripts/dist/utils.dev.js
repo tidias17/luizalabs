@@ -7,7 +7,6 @@ function renderBreadcrumb() {
       switch (_context.prev = _context.next) {
         case 0:
           itens = [];
-          console.log(identify);
 
           if (identify === "/") {
             itens.push({
@@ -24,7 +23,6 @@ function renderBreadcrumb() {
             });
           }
 
-          console.log(itens);
           link = "";
           itens.map(function (item, index) {
             link = document.createElement('a');
@@ -39,7 +37,7 @@ function renderBreadcrumb() {
             }
           });
 
-        case 6:
+        case 4:
         case "end":
           return _context.stop();
       }
