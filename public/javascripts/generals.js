@@ -14,4 +14,5 @@ window.onload = (e) => {
   if(identify === "/wishlist") {
     populatingWishlist()
   }
+  renderBreadcrumb();
 }

@@ -1,3 +1,12 @@
 .breadcrumb {
   margin: 24px 12px;
+  display: flex;
+}
+.breadcrumb a, .breadcrumb p {
+  font-size: 18px;
+  font-weight: 700;
+}
+.breadcrumb p {
+  width: 32px;
+  text-align: center;
 }

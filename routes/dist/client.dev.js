@@ -9,8 +9,7 @@ router.get('/', function _callee(req, res) {
       switch (_context.prev = _context.next) {
         case 0:
           res.render('index', {
-            title: 'MagaNets | Lista de Produtos',
-            breadcrumb: ["Home"]
+            title: 'MagaNets | Lista de Produtos'
           });
 
         case 1:
@@ -26,8 +25,7 @@ router.get('/wishlist', function _callee2(req, res) {
       switch (_context2.prev = _context2.next) {
         case 0:
           res.render('index', {
-            title: 'MagaNets | Lista de Desejos',
-            breadcrumb: ["Home", "Lista de Desejos"]
+            title: 'MagaNets | Lista de Desejos'
           });
 
         case 1:

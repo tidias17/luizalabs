@@ -12,4 +12,6 @@ window.onload = function (e) {
   if (identify === "/wishlist") {
     populatingWishlist();
   }
+
+  renderBreadcrumb();
 };
